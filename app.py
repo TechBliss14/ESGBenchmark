@@ -77,10 +77,6 @@ def analyze_esg(text, questions):
     return esg_data
 
 
-@app.route('/ping', methods=['GET'])
-def analyze_pdf():
-    return "ESG Info "
-
 @app.route('/analyze', methods=['POST'])
 def analyze_pdf():
     if 'file' not in request.files:
@@ -116,6 +112,11 @@ def analyze_pdf():
         print(esg_data)
 
         return jsonify(esg_data)
+
+
+@app.route('/ping', methods=['POST'])
+def ping():
+    return "App up and running"
 
 
 if __name__ == '__main__':
