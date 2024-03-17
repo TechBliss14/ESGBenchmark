@@ -109,9 +109,9 @@ def analyze_pdf():
 
         # Analyze ESG data
         esg_data = analyze_esg(pdf_text, relevant_questions)
-        print(esg_data)
+        #print(esg_data)
 
-        return jsonify(esg_data)
+        return jsonify(esg_info)
 
 
 @app.route('/ping', methods=['GET'])
