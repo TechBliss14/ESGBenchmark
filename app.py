@@ -114,7 +114,7 @@ def analyze_pdf():
         return jsonify(esg_data)
 
 
-@app.route('/ping', methods=['POST'])
+@app.route('/ping', methods=['GET'])
 def ping():
     return "App up and running"
 
